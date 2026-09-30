@@ -1,0 +1,12 @@
+__pycache__/
+.ipynb_checkpoints/
+.pytest_cache/
+.env
+
+# real config and runtime state
+tracker/routes.json
+tracker/amadeus.conf
+tracker/retired/amadeus.conf
+*.sqlite
+*.log
+notify_queue.jsonl

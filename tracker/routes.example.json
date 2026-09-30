@@ -1,0 +1,21 @@
+{
+  "_comment": "Sample config. Copy to routes.json (git-ignored) or point FARE_ROUTES_CONFIG at your own file. Dates are ISO; window = [start_days, end_days] from today; window_dates = fixed calendar trip; history_since = cutover after any window change.",
+  "thresholds": {
+    "percentile_trigger": 20.0,
+    "max_pct_of_typical": 0.95
+  },
+  "routes": [
+    {"key": "KUL-SIN-OW", "origin": "KUL", "dest": "SIN", "trip_type": "oneway",
+     "label": "KUL → SIN", "place": "Singapore", "window": [20, 270]},
+    {"key": "KUL-SIN-RT", "origin": "KUL", "dest": "SIN", "trip_type": "return",
+     "label": "KUL ⇄ SIN", "nights": 7, "place": "Singapore", "window": [20, 270]},
+    {"key": "KUL-BKK-RT", "origin": "KUL", "dest": "BKK", "trip_type": "return",
+     "label": "KUL ⇄ BKK", "nights": 7, "place": "Bangkok", "real_trip": true,
+     "window_dates": ["2027-03-01", "2027-04-30"], "step": 1,
+     "history_since": "2026-10-01"},
+    {"key": "BKK-KUL-OW", "origin": "BKK", "dest": "KUL", "trip_type": "oneway",
+     "label": "BKK → KUL", "place": "Bangkok → KL", "real_trip": true,
+     "window_dates": ["2027-03-01", "2027-04-30"], "step": 1,
+     "history_since": "2026-10-01"}
+  ]
+}
